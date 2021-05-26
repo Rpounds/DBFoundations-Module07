@@ -1,37 +1,54 @@
-## Welcome to GitHub Pages
+Rachel Pounds
 
-You can use the [editor on GitHub](https://github.com/Rpounds/DBFoundations-Module07/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+5/25/2021
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+IT FDN 130 A
 
-### Markdown
+Assignment 07
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Github link
 
-```markdown
-Syntax highlighted code block
+# Introduction
 
-# Header 1
-## Header 2
-### Header 3
+Functions are a great way to name and store sql that can be reused to retrieve data.  This paper will discuss several kinds of functions and provide some examples. 
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+# Explain when a SQL UDF would be used
 
-**Bold** and _Italic_ and `Code` text
+A User Defined Function would be used when there is a custom function the user may want to use again.  Creating the Function allows the user to retrieve it and use it another time.   They can also be used for Check constraints.  If software (like Excel) is going to be used, a UDF may not be a good idea because it’s more difficult to get other software to read the functions.  In these cases, Views may be a better option, if they are simple.
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+# Explain the differences between Scalar, Inline and Multi-Statement Functions
 
-### Jekyll Themes
+A Scalar Function returns a single value and is not treated like a table. 
+An Inline Table-valued Function creates a table of data with some parameters.   When naming this kind of function DBO should be used as a prefix to the Function name.  A Select statement can be used on this type of Function, just like a View or Table.
+ 
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Rpounds/DBFoundations-Module07/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+![image](https://user-images.githubusercontent.com/84206447/119711839-d3fb0980-be14-11eb-8f6f-aba56a50b42f.png)
 
-### Support or Contact
+Figure 1- Inline Table-valued Function and Select statement examples
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+
+![image](https://user-images.githubusercontent.com/84206447/119711864-d8bfbd80-be14-11eb-8523-a189a554ccc9.png)
+
+Figure 2-Snippet of results from Selecting on function
+
+
+Multi-Statement  Table-Valued Functions create a pseudo table of data after some additional processing, using Select statements on various sources. 
+
+
+ ![image](https://user-images.githubusercontent.com/84206447/119711929-eaa16080-be14-11eb-925e-e6785593b26b.png)
+
+Figure 3-Multi-Statement Table-Valued Function sql example from Module 7 Demos
+
+
+![image](https://user-images.githubusercontent.com/84206447/119711963-f55bf580-be14-11eb-8bf5-b3f986e45af5.png)
+
+Figure 4- How call get results from the function from Module 7 Demo
+
+
+# Summary
+This paper described User Defined Functions (UDFs), including the differences between the varieties and some examples.
+
+
+
